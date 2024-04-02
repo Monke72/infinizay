@@ -1,0 +1,57 @@
+.news {
+  padding-block: 130px;
+  background-color: #000000;
+
+  &__header-left {
+    &__title {
+      font-size: 64px;
+      line-height: 74px;
+    }
+  }
+
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  &__main-left {
+    max-width: var(--news-sect-width);
+    &__text {
+      font-size: 36px;
+    }
+  }
+
+  &__main-title {
+    color: var(--color-blue);
+  }
+
+  &__main-right {
+    max-width: var(--news-sect-width);
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    column-gap: 24px;
+    max-height: 680px;
+
+    &__text {
+      font-size: 23px;
+      line-height: 34px;
+    }
+  }
+}
+
+.news--esports {
+  justify-content: start;
+}
+
+.news__main-left__img {
+  margin-bottom: 54px;
+}
+.news__main-title {
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.news__main-title--notP {
+  padding: unset;
+}
