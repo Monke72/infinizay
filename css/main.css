@@ -260,6 +260,7 @@ body {
   --font-size-title: 64px;
   --font-size-spons: 48px;
   --necessity-text-width: 716px;
+  --news-sect-width: 650px;
   --font-family-base: "Orbitron-Regular", sans-serif;
 }
 @media (max-width: 859px) {
@@ -877,4 +878,56 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.news {
+  padding-block: 130px;
+  background-color: #000000;
+}
+.news__header-left__title {
+  font-size: 64px;
+  line-height: 74px;
+}
+.news__main {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.news__main-left {
+  max-width: var(--news-sect-width);
+}
+.news__main-left__text {
+  font-size: 36px;
+}
+.news__main-title {
+  color: var(--color-blue);
+}
+.news__main-right {
+  max-width: var(--news-sect-width);
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  -moz-column-gap: 24px;
+       column-gap: 24px;
+  max-height: 680px;
+}
+.news__main-right__text {
+  font-size: 23px;
+  line-height: 34px;
+}
+
+.news--esports {
+  justify-content: start;
+}
+
+.news__main-left__img {
+  margin-bottom: 54px;
+}
+
+.news__main-title {
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.news__main-title--notP {
+  padding: unset;
 }/*# sourceMappingURL=main.css.map */
