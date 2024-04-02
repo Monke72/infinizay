@@ -1,0 +1,72 @@
+.category {
+  img {
+    max-width: 110px;
+    @include tablet {
+      max-width: 80px;
+    }
+  }
+  background-color: darkblue;
+
+  &__grid-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-around;
+  }
+
+  &__grid-item {
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__grid-text {
+    font-size: 48px;
+    line-height: 58px;
+    @include desktop {
+      font-size: 40px;
+    }
+    @include tablet {
+      font-size: 34px;
+    }
+  }
+}
+
+.category--one,
+.category--too,
+.category--three {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 730px;
+
+  @include desktop {
+    height: 600px;
+  }
+  @include tablet {
+    height: 500px;
+  }
+}
+
+.category--one {
+  background: url(./../image/category/smoothFPS.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.category--too {
+  background: url(./../image/category/multiplayer.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.category--three {
+  background: url(./../image/category/openWorld.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

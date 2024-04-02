@@ -721,6 +721,7 @@ body {
   left: 50%;
   top: 50%;
 }
+
 .new__main {
   display: flex;
   justify-content: space-between;
@@ -729,4 +730,151 @@ body {
 .new__esports {
   justify-content: start;
   padding-bottom: 12px;
+}
+
+.custom {
+  background-color: #2a313c;
+}
+.custom__container {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+.custom__info {
+  max-width: 600px;
+  padding-block: 83px;
+}
+@media (max-width: 1400px) {
+  .custom__info {
+    padding-block: 50px;
+    max-width: 490px;
+  }
+}
+.custom__info-esports {
+  justify-content: start;
+  padding-bottom: 11px;
+}
+.custom__info-title {
+  font-size: 64px;
+  line-height: 74px;
+  padding-bottom: 38px;
+}
+@media (max-width: 1400px) {
+  .custom__info-title {
+    font-size: 58px;
+  }
+}
+.custom__info-text {
+  font-size: 20px;
+  color: rgba(223, 223, 223, 0.8);
+  padding-bottom: 54px;
+}
+@media (max-width: 1400px) {
+  .custom__info-text {
+    font-size: 18px;
+    padding-bottom: 40px;
+  }
+}
+
+.swiper-wrapper {
+  max-width: 700px;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  content: "" !important;
+}
+
+.swiper-slide {
+  padding: 10px;
+  border-radius: 20px;
+  background: rgb(59, 61, 70);
+}
+
+.custom__image-hero {
+  height: 100%;
+}
+
+.category {
+  background-color: darkblue;
+}
+.category img {
+  max-width: 110px;
+}
+@media (max-width: 1023px) {
+  .category img {
+    max-width: 80px;
+  }
+}
+.category__grid-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-around;
+}
+.category__grid-item {
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.category__grid-text {
+  font-size: 48px;
+  line-height: 58px;
+}
+@media (max-width: 1200px) {
+  .category__grid-text {
+    font-size: 40px;
+  }
+}
+@media (max-width: 1023px) {
+  .category__grid-text {
+    font-size: 34px;
+  }
+}
+
+.category--one,
+.category--too,
+.category--three {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 730px;
+}
+@media (max-width: 1200px) {
+  .category--one,
+  .category--too,
+  .category--three {
+    height: 600px;
+  }
+}
+@media (max-width: 1023px) {
+  .category--one,
+  .category--too,
+  .category--three {
+    height: 500px;
+  }
+}
+
+.category--one {
+  background: url(./../image/category/smoothFPS.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.category--too {
+  background: url(./../image/category/multiplayer.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.category--three {
+  background: url(./../image/category/openWorld.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=main.css.map */
