@@ -1,0 +1,23 @@
+:root {
+  --color-base: #ffffff;
+  --color-accent: #fac422;
+  --color-blue: #57b8ff;
+  --color-gray: #dfdfdf;
+  --color-gray-alt: #999999;
+  --color-accent-alt: #fdd04a;
+  --color-input: #555555;
+  --color-footer-text: #383d45;
+  --color-footer-bc: #222730;
+
+  --font-size-base: clamp(0.75rem, 0.643rem + 0.54vw, 1.125rem);
+  --font-size-little: clamp(0.688rem, 0.297rem + 0.78vw, 1rem);
+  --font-size-title: 64px;
+  --font-size-spons: 48px;
+  --necessity-text-width: 716px;
+
+  --font-family-base: "Orbitron-Regular", sans-serif;
+
+  @include mobile {
+    --font-size-title: 56px;
+  }
+}

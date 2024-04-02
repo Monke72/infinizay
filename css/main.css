@@ -1,0 +1,732 @@
+@charset "UTF-8";
+/**
+  Нормализация блочной модели
+ */
+*,
+*::before,
+*::after,
+*:focus,
+*:active {
+  box-sizing: border-box;
+  border: none;
+}
+
+ul,
+li,
+a {
+  padding: 0;
+  list-style-type: none;
+  list-style: none;
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  padding: 0;
+}
+
+/**
+        Убираем внутренние отступы слева тегам списков,
+        у которых есть атрибут class
+       */
+:where(ul, ol):where([class]) {
+  padding-left: 0;
+}
+
+/**
+        Убираем внешние отступы body и двум другим тегам,
+        у которых есть атрибут class
+       */
+body,
+:where(blockquote, figure):where([class]) {
+  margin: 0;
+}
+
+/**
+        Убираем внешние отступы вертикали нужным тегам,
+        у которых есть атрибут class
+       */
+:where(h1, h2, h3, h4, h5, h6, p, ul, ol, dl):where([class]) {
+  margin-block: 0;
+}
+
+:where(dd[class]) {
+  margin-left: 0;
+}
+
+:where(fieldset[class]) {
+  margin-left: 0;
+  padding: 0;
+  border: none;
+}
+
+/**
+        Убираем стандартный маркер маркированному списку,
+        у которого есть атрибут class
+       */
+:where(ul[class]) {
+  list-style: none;
+}
+
+/**
+        Обнуляем вертикальные внешние отступы параграфа,
+        объявляем локальную переменную для внешнего отступа вниз,
+        чтобы избежать взаимодействие с более сложным селектором
+       */
+/**
+        Внешний отступ вниз для параграфа без атрибута class,
+        который расположен не последним среди своих соседних элементов
+       */
+/**
+        Упрощаем работу с изображениями
+       */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/**
+        Наследуем свойства шрифт для полей ввода
+       */
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+html {
+  /**
+          Пригодится в большинстве ситуаций
+          (когда, например, нужно будет "прижать" футер к низу сайта)
+         */
+  height: 100%;
+  /**
+          Плавный скролл
+         */
+  scroll-behavior: smooth;
+}
+
+body {
+  /**
+          Пригодится в большинстве ситуаций
+          (когда, например, нужно будет "прижать" футер к низу сайта)
+         */
+  min-height: 100%;
+  /**
+          Унифицированный интерлиньяж
+         */
+  line-height: 1.5;
+}
+
+/**
+        Приводим к единому цвету svg-элементы
+       */
+svg *[stroke] {
+  stroke: currentColor;
+}
+
+/**
+        Чиним баг задержки смены цвета при взаимодействии с svg-элементами
+       */
+svg * {
+  transition-property: fill, stroke;
+}
+
+/**
+        Удаляем все анимации и переходы для людей,
+        которые предпочитают их не использовать
+       */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms;
+    scroll-behavior: auto !important;
+  }
+}
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+ul,
+ul li {
+  list-style: none;
+}
+
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active {
+  outline: none;
+}
+
+button,
+input[type=submit] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  color: var(--color-base);
+}
+
+.container {
+  max-width: 1350px;
+  padding-inline: 15px;
+  margin-inline: auto;
+}
+@media (max-width: 1420px) {
+  .container {
+    max-width: 1150px;
+  }
+}
+
+body {
+  padding-bottom: 30vh;
+}
+
+.esports {
+  display: flex;
+  align-items: center;
+  color: var(--color-blue);
+  justify-content: center;
+  font-size: 16px;
+}
+
+@font-face {
+  font-family: "Orbitron-Bold";
+  src: url("./../../fonts/AnyConv.com__Orbitron-Bold.woff") format("woff"), url("./../../fonts/AnyConv.com__Orbitron-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Orbitron-Regular";
+  src: url("./../../fonts/AnyConv.com__Orbitron-Regular.woff") format("woff"), url("./../../fonts/AnyConv.com__Orbitron-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-reg";
+  src: url("./../../fonts/AnyConv.com__Roboto-Regular.woff") format("woff"), url("./../../fonts/AnyConv.com__Roboto-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+:root {
+  --color-base: #ffffff;
+  --color-accent: #fac422;
+  --color-blue: #57b8ff;
+  --color-gray: #dfdfdf;
+  --color-gray-alt: #999999;
+  --color-accent-alt: #fdd04a;
+  --color-input: #555555;
+  --color-footer-text: #383d45;
+  --color-footer-bc: #222730;
+  --font-size-base: clamp(0.75rem, 0.643rem + 0.54vw, 1.125rem);
+  --font-size-little: clamp(0.688rem, 0.297rem + 0.78vw, 1rem);
+  --font-size-title: 64px;
+  --font-size-spons: 48px;
+  --necessity-text-width: 716px;
+  --font-family-base: "Orbitron-Regular", sans-serif;
+}
+@media (max-width: 859px) {
+  :root {
+    --font-size-title: 56px;
+  }
+}
+
+.header--wrapper {
+  background-image: url(./../../image/header/headerBc.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header {
+  position: relative;
+  padding-top: 20px;
+}
+.header__nav-list {
+  font-size: var(--font-size-little);
+  gap: 4.167vw;
+  display: flex;
+}
+.header__nav-link {
+  color: var(--color-base);
+}
+.header__buttons {
+  gap: 20px;
+  display: flex;
+}
+.header__buttons-btn {
+  color: var(--color-base);
+  padding: 16px 31px;
+  border: 1px solid var(--color-base);
+  line-height: 20px;
+  letter-spacing: 0%;
+}
+@media (max-width: 1200px) {
+  .header {
+    padding-bottom: 120px;
+  }
+}
+
+.header__bascet {
+  display: flex;
+  position: relative;
+}
+
+.counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 11px;
+  color: #141820;
+  background-color: var(--color-base);
+  width: 25px;
+  height: 18px;
+  border-radius: 9px;
+}
+
+.header__main {
+  padding-top: 210px;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 1200px) {
+  .header__main {
+    padding-top: 160px;
+  }
+}
+.header__main-info {
+  position: relative;
+  max-width: 45.556vw;
+}
+.header__main-info__sport {
+  display: flex;
+  align-items: center;
+  color: var(--color-blue);
+  font-size: 16px;
+  padding-bottom: 24px;
+}
+.header__main-info__title {
+  font-size: 72px;
+  max-width: 45.556vw;
+  line-height: 86px;
+  padding-bottom: 45px;
+}
+@media (max-width: 1420px) {
+  .header__main-info__title {
+    font-size: 60px;
+  }
+}
+@media (max-width: 1200px) {
+  .header__main-info__title {
+    font-size: 50px;
+    line-height: 65px;
+    padding-bottom: 35px;
+  }
+}
+.header__main-info__buttons {
+  padding-bottom: 250px;
+  padding-top: 53px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+@media (max-width: 1200px) {
+  .header__main-info__buttons {
+    padding-bottom: 50px;
+  }
+}
+.header__main-info__buttons-more {
+  background-color: var(--color-blue);
+  color: var(--color-base);
+  padding: 21px 34px;
+}
+.header__main-info__buttons-link {
+  color: var(--color-base);
+}
+.header__main-info__text-more {
+  color: var(--color-gray-alt);
+}
+@media (max-width: 1200px) {
+  .header__main-info__text-more {
+    font-size: 14px;
+  }
+}
+
+.title--accent {
+  position: relative;
+}
+.title--accent::after {
+  content: "";
+  left: 0;
+  background: url(./../image/header/lineHeader.png) no-repeat;
+  position: absolute;
+  top: 80px;
+  height: 15px;
+  width: 400px;
+}
+@media (min-width: 1401px) {
+  .title--accent::after {
+    width: 440px;
+  }
+}
+@media (max-width: 1200px) {
+  .title--accent::after {
+    top: 55px;
+    width: 330px;
+  }
+}
+
+.header__main-image__info {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--color-base);
+  color: #333333;
+  border-radius: 3px;
+  padding: 5px;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  right: 0;
+  transform: translate(15px, -60px);
+}
+@media (max-width: 1200px) {
+  .header__main-image__info {
+    transform: translate(-20px, -40px);
+  }
+}
+
+.header__main-vert__list {
+  display: flex;
+  gap: 50px;
+  writing-mode: vertical-rl;
+  position: absolute;
+  flex-direction: row-reverse;
+  transform: rotate(-180deg);
+  left: -40px;
+  top: 110px;
+}
+@media (max-width: 1200px) {
+  .header__main-vert__list {
+    writing-mode: unset;
+    transform: unset;
+    left: unset;
+    top: unset;
+    text-align: left;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+.header__main-vert__link {
+  color: #80858f;
+  font-size: 11px;
+  transition-duration: 0.2s;
+}
+@media (hover: hover) {
+  .header__main-vert__link:hover {
+    color: var(--color-blue);
+  }
+}
+@media (hover: none) {
+  .header__main-vert__link:active {
+    color: var(--color-blue);
+  }
+}
+
+.header__main-image__child {
+  width: 45.833vw;
+}
+@media (max-width: 1400px) {
+  .header__main-image__child {
+    width: 40.714vw;
+  }
+}
+
+.header__main-vert__title {
+  display: inline-flex;
+  align-items: center;
+  font-size: 20px;
+  color: var(--color-base);
+}
+@media (hover: hover) {
+  .header__main-vert__title:hover {
+    color: var(--color-blue);
+  }
+}
+@media (hover: none) {
+  .header__main-vert__title:active {
+    color: var(--color-blue);
+  }
+}
+
+@media (max-width: 1200px) {
+  .header--list--none {
+    display: none;
+  }
+}
+
+.vert--none {
+  display: none;
+}
+@media (max-width: 1200px) {
+  .vert--none {
+    display: inline-flex;
+  }
+}
+
+.sponsors {
+  padding-block: 130px;
+  color: #555555;
+  text-align: center;
+  background-color: var(--color-accent-alt);
+}
+@media (max-width: 1023px) {
+  .sponsors {
+    padding-block: 90px;
+  }
+}
+.sponsors__title {
+  font-size: var(--font-size-spons);
+  color: #222730;
+}
+.sponsors__title--accented {
+  position: relative;
+}
+.sponsors__title--accented::after {
+  content: "";
+  background: url(./../image/sponsors/lineSponsors.png);
+  width: 292px;
+  height: 12px;
+  position: absolute;
+  left: 0;
+  bottom: -13px;
+}
+.sponsors__info {
+  display: flex;
+  justify-content: center;
+}
+.sponsors__info-text {
+  max-width: 575px;
+  font-size: 16px;
+  padding-bottom: 52px;
+  padding-top: 44px;
+}
+.sponsors__image-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+@media (max-width: 1023px) {
+  .sponsors__image-list {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    justify-items: center;
+    max-width: 750px;
+    margin-inline: auto;
+    gap: 15px;
+  }
+}
+
+.necessity {
+  background: url(./../image/necessity/necessityBc.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.necessity__esports {
+  display: flex;
+  align-items: center;
+  color: var(--color-blue);
+  justify-content: center;
+  font-size: 16px;
+}
+.necessity__title {
+  font-size: var(--font-size-title);
+  text-align: center;
+  max-width: var(--necessity-text-width);
+  line-height: 74px;
+  padding-top: 13px;
+  padding-bottom: 39px;
+}
+.necessity__text {
+  max-width: var(--necessity-text-width);
+  text-align: center;
+  font-size: 20px;
+  color: rgba(223, 223, 223, 0.8);
+  padding-bottom: 60px;
+}
+@media (max-width: 859px) {
+  .necessity__text {
+    font-size: 18px;
+  }
+}
+.necessity__card-list {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  justify-content: space-between;
+  gap: 32px;
+}
+@media (max-width: 859px) {
+  .necessity__card-list {
+    grid-template-columns: 1fr;
+  }
+}
+.necessity__card-item {
+  max-width: 576px;
+  padding: 35px 35px 35px 80px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.15);
+}
+@media (max-width: 1023px) {
+  .necessity__card-item {
+    padding: 25px 25px 25px 60px;
+  }
+}
+@media (max-width: 859px) {
+  .necessity__card-item {
+    max-width: var(--necessity-text-width);
+    padding: 25px;
+  }
+}
+
+.card__title {
+  font-size: 32px;
+  line-height: 42px;
+  position: relative;
+}
+@media (max-width: 1023px) {
+  .card__title {
+    font-size: 26px;
+  }
+}
+@media (max-width: 859px) {
+  .card__title {
+    display: flex;
+    justify-content: center;
+  }
+}
+.card__text {
+  color: rgba(223, 223, 223, 0.8);
+  line-height: 28px;
+  font-size: 16px;
+}
+@media (max-width: 1023px) {
+  .card__text {
+    font-size: 14px;
+  }
+}
+@media (max-width: 859px) {
+  .card__text {
+    font-size: 16px;
+    text-align: center;
+  }
+}
+
+.necessity-container {
+  padding-block: 130px;
+  max-width: 1230px;
+  padding-inline: 15px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (max-width: 859px) {
+  .necessity-container {
+    padding-block: 100px;
+  }
+}
+
+.card__title-text {
+  position: relative;
+}
+.card__title-text::before {
+  content: url(./../icon/necessity/necessityTitleIcon.svg);
+  position: absolute;
+  left: -40px;
+}
+
+.new {
+  padding-block: 130px;
+  background-color: #000000;
+}
+.new__left {
+  max-width: 721px;
+}
+.new__left-title {
+  font-size: 64px;
+  line-height: 74px;
+  font-weight: 300;
+  padding-bottom: 38px;
+}
+.new__left-text {
+  font-size: 20px;
+  color: rgba(223, 223, 223, 0.8);
+  line-height: 30px;
+  padding-bottom: 54px;
+}
+.new__left-button {
+  background-color: var(--color-blue);
+  display: inline-block;
+  padding: 21px 34px;
+}
+.new__right {
+  position: relative;
+}
+.new__right-btn {
+  position: absolute;
+  top: 0;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+}
+.new__main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.new__esports {
+  justify-content: start;
+  padding-bottom: 12px;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,227 @@
+.header--wrapper {
+  background-image: url(./../../image/header/headerBc.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header {
+  position: relative;
+  padding-top: 20px;
+
+  &__nav-list {
+    font-size: var(--font-size-little);
+    gap: 4.167vw;
+    display: flex;
+  }
+
+  &__nav-link {
+    color: var(--color-base);
+  }
+
+  &__buttons {
+    gap: 20px;
+    display: flex;
+  }
+
+  &__buttons-btn {
+    color: var(--color-base);
+    padding: 16px 31px;
+    border: 1px solid var(--color-base);
+    line-height: 20px;
+    letter-spacing: 0%;
+  }
+  @include desktop {
+    padding-bottom: 120px;
+  }
+}
+
+.header__bascet {
+  display: flex;
+  position: relative;
+}
+
+.counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 11px;
+  color: #141820;
+  background-color: var(--color-base);
+  width: 25px;
+  height: 18px;
+  border-radius: 9px;
+}
+
+.header {
+  &__main {
+    padding-top: 210px;
+    display: flex;
+    justify-content: space-between;
+    @include desktop {
+      padding-top: 160px;
+    }
+  }
+
+  &__main-info {
+    position: relative;
+    max-width: 45.556vw;
+    &__sport {
+      display: flex;
+      align-items: center;
+      color: var(--color-blue);
+      font-size: 16px;
+      padding-bottom: 24px;
+    }
+    &__title {
+      font-size: 72px;
+      max-width: 45.556vw;
+      line-height: 86px;
+      padding-bottom: 45px;
+      @media (max-width: 1420px) {
+        font-size: 60px;
+      }
+      @include desktop {
+        font-size: 50px;
+        line-height: 65px;
+        padding-bottom: 35px;
+      }
+    }
+
+    &__buttons {
+      padding-bottom: 250px;
+      padding-top: 53px;
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      @include desktop {
+        padding-bottom: 50px;
+      }
+
+      &-more {
+        background-color: var(--color-blue);
+        color: var(--color-base);
+        padding: 21px 34px;
+      }
+      &-link {
+        color: var(--color-base);
+      }
+    }
+  }
+
+  &__main-info__text {
+    &-more {
+      color: var(--color-gray-alt);
+      @include desktop {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.title--accent {
+  position: relative;
+  &::after {
+    content: "";
+    left: 0;
+    background: url(./../image/header/lineHeader.png) no-repeat;
+    position: absolute;
+    top: 80px;
+    height: 15px;
+    width: 400px;
+    @include desktop-above-xl {
+      width: 440px;
+    }
+    @include desktop {
+      top: 55px;
+      width: 330px;
+    }
+  }
+}
+
+.header {
+  &__main-image {
+    &__info {
+      position: absolute;
+      display: inline-flex;
+      align-items: center;
+      background-color: var(--color-base);
+      color: #333333;
+      border-radius: 3px;
+      padding: 5px;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      right: 0;
+      transform: translate(15px, -60px);
+      @include desktop {
+        transform: translate(-20px, -40px);
+      }
+    }
+  }
+}
+
+.header {
+  &__main-vert {
+    &__list {
+      display: flex;
+      gap: 50px;
+      writing-mode: vertical-rl;
+      position: absolute;
+      flex-direction: row-reverse;
+      transform: rotate(-180deg);
+      left: -40px;
+      top: 110px;
+
+      @include desktop {
+        writing-mode: unset;
+        transform: unset;
+        left: unset;
+        top: unset;
+        text-align: left;
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+    &__link {
+      color: #80858f;
+      font-size: 11px;
+      transition-duration: 0.2s;
+      @include hover {
+        color: var(--color-blue);
+      }
+    }
+  }
+}
+.header__main-image__child {
+  width: 45.833vw;
+  @include desktop-xl {
+    width: 40.714vw;
+  }
+}
+.header__main-vert__title {
+  display: inline-flex;
+  align-items: center;
+  font-size: 20px;
+  color: var(--color-base);
+  @include hover {
+    color: var(--color-blue);
+  }
+}
+
+.header--list--none {
+  @include desktop {
+    display: none;
+  }
+}
+.vert--none {
+  display: none;
+  @include desktop {
+    display: inline-flex;
+  }
+}

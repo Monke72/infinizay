@@ -1,0 +1,53 @@
+.sponsors {
+  padding-block: 130px;
+  color: #555555;
+  text-align: center;
+  background-color: var(--color-accent-alt);
+  @include tablet {
+    padding-block: 90px;
+  }
+
+  &__title {
+    font-size: var(--font-size-spons);
+    color: #222730;
+  }
+
+  &__title--accented {
+    position: relative;
+    &::after {
+      content: "";
+      background: url(./../image/sponsors/lineSponsors.png);
+      width: 292px;
+      height: 12px;
+      position: absolute;
+      left: 0;
+      bottom: -13px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__info-text {
+    max-width: 575px;
+    font-size: 16px;
+    padding-bottom: 52px;
+    padding-top: 44px;
+  }
+
+  &__image-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    @include tablet {
+      display: grid;
+      grid-template-columns: repeat(3, 2fr);
+      justify-items: center;
+      max-width: 750px;
+      margin-inline: auto;
+      gap: 15px;
+    }
+  }
+}

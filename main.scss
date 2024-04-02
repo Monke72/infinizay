@@ -1,0 +1,7 @@
+//base
+@import "./scss/base/reset", "./scss/base/mixins", "./scss/base/base",
+  "./scss/base/fonts", "./scss/base/vars";
+
+//blocks
+@import "./scss/blocks/header", "./scss/blocks/sponsors",
+  "./scss/blocks/necessityAndCard", "./scss/blocks/new";

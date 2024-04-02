@@ -1,0 +1,108 @@
+.necessity {
+  background: url(./../image/necessity/necessityBc.jpg);
+  background-size: cover;
+  background-position: center;
+  &__esports {
+    display: flex;
+    align-items: center;
+    color: var(--color-blue);
+    justify-content: center;
+    font-size: 16px;
+  }
+
+  &__title {
+    font-size: var(--font-size-title);
+    text-align: center;
+    max-width: var(--necessity-text-width);
+    line-height: 74px;
+    padding-top: 13px;
+    padding-bottom: 39px;
+  }
+
+  &__text {
+    max-width: var(--necessity-text-width);
+    text-align: center;
+    font-size: 20px;
+    color: rgba(223, 223, 223, 0.8);
+    padding-bottom: 60px;
+    @include mobile {
+      font-size: 18px;
+    }
+  }
+
+  &__card-list {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    justify-content: space-between;
+    gap: 32px;
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__card-item {
+    max-width: 576px;
+    padding: 35px 35px 35px 80px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.15);
+
+    @include tablet {
+      padding: 25px 25px 25px 60px;
+    }
+    @include mobile {
+      max-width: var(--necessity-text-width);
+      padding: 25px;
+    }
+  }
+}
+
+.card {
+  &__title {
+    font-size: 32px;
+    line-height: 42px;
+    position: relative;
+
+    @include tablet {
+      font-size: 26px;
+    }
+    @include mobile {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__text {
+    color: rgba(223, 223, 223, 0.8);
+    line-height: 28px;
+    font-size: 16px;
+    @include tablet {
+      font-size: 14px;
+    }
+    @include mobile {
+      font-size: 16px;
+      text-align: center;
+    }
+  }
+}
+
+.necessity-container {
+  padding-block: 130px;
+  max-width: 1230px;
+  padding-inline: 15px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include mobile {
+    padding-block: 100px;
+  }
+}
+
+.card__title-text {
+  position: relative;
+  &::before {
+    content: url(./../icon/necessity/necessityTitleIcon.svg);
+    position: absolute;
+    left: -40px;
+  }
+}

@@ -1,0 +1,51 @@
+.new {
+  padding-block: 130px;
+  background-color: #000000;
+  &__left {
+    max-width: 721px;
+  }
+
+  &__left-title {
+    font-size: 64px;
+    line-height: 74px;
+    font-weight: 300;
+    padding-bottom: 38px;
+  }
+
+  &__left-text {
+    font-size: 20px;
+    color: rgba(223, 223, 223, 0.8);
+    line-height: 30px;
+    padding-bottom: 54px;
+  }
+
+  &__left-button {
+    background-color: var(--color-blue);
+    display: inline-block;
+    padding: 21px 34px;
+  }
+
+  &__right {
+    position: relative;
+    &-btn {
+      position: absolute;
+      top: 0;
+      transform: translate(-50%, -50%);
+      left: 50%;
+      top: 50%;
+    }
+  }
+
+  &__right-img {
+  }
+}
+.esports {
+}
+.new__main {
+  display: flex;
+  justify-content: space-between;
+}
+.new__esports {
+  justify-content: start;
+  padding-bottom: 12px;
+}
