@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./css/main.css" />
+    <link
+      rel="stylesheet"
+      href="./plagins/youtubeLightbox/youtubeLightbox.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <div class="header--wrapper">
@@ -237,12 +245,111 @@
         <div class="new__right">
           <img class="new__right-img" src="./image/new/newVideo.png" alt="" />
           <button class="new__right-btn">
-            <img src="./icon/new/playBtn.svg" alt="" />
+            <a
+              data-youtubeLightbox
+              href="https://www.youtube.com/watch?v=d0PObKX8tkA"
+              ><img src="./icon/new/playBtn.svg" alt=""
+            /></a>
           </button>
         </div>
       </div>
     </section>
 
+    <section class="custom">
+      <div class="container custom__container">
+        <div class="custom__image">
+          <img
+            class="custom__image-hero"
+            src="./image/custom/customHero.png"
+            alt=""
+          />
+        </div>
+        <div class="custom__info">
+          <div class="esports custom__info-esports">
+            <span><img src="./icon/header/fairHeader.svg" alt="" /></span>
+            FUTURE OF eSPORTS
+          </div>
+          <div class="custom__info-title">Customize your Own Character</div>
+          <p class="custom__info-text">
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+            quae ab illo inventore veritatis et quasi architecto beatae.
+          </p>
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./image/custom/sliderImage/slidsOne.png" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./image/custom/sliderImage/slidsToo.png" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./image/custom/sliderImage/slidsThree.png" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./image/custom/sliderImage/slidsToo.png" alt="" />
+              </div>
+
+              <div class="swiper-slide">
+                <img src="./image/custom/sliderImage/slidsThree.png" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./image/custom/sliderImage/slidsOne.png" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./image/custom/sliderImage/slidsTHree.png" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./image/custom/sliderImage/slidsToo.png" alt="" />
+              </div>
+            </div>
+            <div class="swiper-button-next">
+              <img src="./icon/custom/swiperRight.svg" alt="" />
+            </div>
+            <div class="swiper-button-prev">
+              <img src="./icon/custom/swiperLeft.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="category">
+      <div class="category__grid">
+        <ul class="category__grid-list">
+          <li class="category__grid-item category--one">
+            <div class="category__grid-img">
+              <img src="./icon/category/fps.svg" alt="" />
+            </div>
+            <p class="category__grid-text">Smooth FPS</p>
+          </li>
+          <li class="category__grid-item category--too">
+            <div class="category__grid-img">
+              <img src="./icon/category/multi.svg" alt="" />
+            </div>
+            <p class="category__grid-text">Multiplayer</p>
+          </li>
+          <li class="category__grid-item category--three">
+            <div class="category__grid-img">
+              <img src="./icon/category/openWorld.svg" alt="" />
+            </div>
+            <p class="category__grid-text">Open World</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- YouTube LightBox -->
+    <div id="youtubelightbox" class="youtubelightbox">
+      <div class="youtubelightbox__centeredchild">
+        <div class="youtubelightbox__videowrapper">
+          <div id="youtubelightboxPlayer"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./plagins/youtubeLightbox/youtubeLightbox.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>
