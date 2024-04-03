@@ -38,6 +38,12 @@
       transform: translate(-50%, -50%);
       left: 50%;
       top: 50%;
+      transition-duration: 0.5s;
+      @include hover {
+        .Vector__main {
+          fill: aqua;
+        }
+      }
     }
   }
 }
