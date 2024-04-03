@@ -608,6 +608,17 @@ body {
   }
 }
 
+@media (hover: hover) {
+  .sponsors__image-item:hover {
+    transform: scale(1.05);
+  }
+}
+@media (hover: none) {
+  .sponsors__image-item:active {
+    transform: scale(1.05);
+  }
+}
+
 .necessity {
   background: url(./../image/necessity/necessityBc.jpg);
   background-size: cover;
@@ -771,6 +782,17 @@ body {
   transform: translate(-50%, -50%);
   left: 50%;
   top: 50%;
+  transition-duration: 0.5s;
+}
+@media (hover: hover) {
+  .new__right-btn:hover .Vector__main {
+    fill: aqua;
+  }
+}
+@media (hover: none) {
+  .new__right-btn:active .Vector__main {
+    fill: aqua;
+  }
 }
 
 .new__main {
@@ -1129,4 +1151,14 @@ body {
 .footer__top-socials__list {
   display: flex;
   gap: 20px;
+}
+
+.footer--accentend {
+  position: relative;
+}
+.footer--accentend::after {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  content: url(./../image/footer/lineFooter.png);
 }/*# sourceMappingURL=main.css.map */

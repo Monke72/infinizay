@@ -51,3 +51,8 @@
     }
   }
 }
+.sponsors__image-item {
+  @include hover {
+    transform: scale(1.05);
+  }
+}

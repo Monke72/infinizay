@@ -11,12 +11,6 @@
     border-bottom: 1px solid rgb(62, 62, 62);
   }
 
-  &__top-logo {
-  }
-
-  &__top-menu {
-  }
-
   &__top-socials {
     img {
       max-width: 32px;
@@ -74,4 +68,13 @@
 .footer__top-socials__list {
   display: flex;
   gap: 20px;
+}
+.footer--accentend {
+  position: relative;
+  &::after {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    content: url(./../image/footer/lineFooter.png);
+  }
 }
