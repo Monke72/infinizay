@@ -13,6 +13,21 @@ $mobile: 859px;
 $mobile-s-above: 641px;
 $mobile-s: 640px;
 
+$mobile-xs-above: 501px;
+$mobile-xs: 500px;
+
+@mixin mobile-xs-above {
+  @media (min-width: $mobile-xs-above) {
+    @content;
+  }
+}
+
+@mixin mobile-xs {
+  @media (max-width: $mobile-xs) {
+    @content;
+  }
+}
+
 @mixin desktop-above-xl {
   @media (min-width: $desktop-above-xl) {
     @content;
