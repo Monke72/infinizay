@@ -2,6 +2,14 @@
   background-image: url(./../../image/header/headerBc.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+
+  @include tablet {
+    background-position: center;
+  }
+  @include mobile-s {
+    background-image: unset;
+    background-color: #000000;
+  }
 }
 
 .header__top {
@@ -18,12 +26,28 @@
     font-size: var(--font-size-little);
     gap: 4.167vw;
     display: flex;
+    z-index: 10;
+    @include tablet {
+      gap: 3vw;
+    }
+    @include mobile-s {
+      position: absolute;
+      right: 15px;
+      flex-direction: column;
+      gap: 2vw;
+      top: 59px;
+    }
   }
 
   &__nav-link {
     color: var(--color-base);
     @include hover {
       color: var(--color-accent-alt);
+    }
+    @include mobile {
+      @include hover {
+        color: var(--color-blue);
+      }
     }
   }
 
@@ -38,13 +62,24 @@
     padding: 16px 31px;
     border: 1px solid var(--color-base);
     line-height: 20px;
-    letter-spacing: 0%;
     @include hover {
       transform: scale(1.1);
+    }
+    @include mobile {
+      padding: 12px 18px;
+    }
+    @include mobile-s {
+      display: none;
     }
   }
   @include desktop {
     padding-bottom: 120px;
+  }
+  @include tablet {
+    padding-bottom: 100px;
+  }
+  @include mobile-s {
+    padding-bottom: 75px;
   }
 }
 
@@ -66,6 +101,10 @@
   width: 25px;
   height: 18px;
   border-radius: 9px;
+  @include mobile {
+    width: 19px;
+    height: 15px;
+  }
 }
 
 .header {
@@ -76,17 +115,40 @@
     @include desktop {
       padding-top: 160px;
     }
+    @include tablet {
+      padding-top: 120px;
+    }
+    @include mobile {
+      justify-content: center;
+    }
+    @include mobile-s {
+      padding-top: 75px;
+    }
   }
 
   &__main-info {
     position: relative;
     max-width: 45.556vw;
+    @include tablet {
+      max-width: 55vw;
+    }
+    @include mobile-s {
+      max-width: 100vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
     &__sport {
       display: flex;
       align-items: center;
       color: var(--color-blue);
       font-size: 16px;
       padding-bottom: 24px;
+      @include mobile-xs {
+        font-size: 13px;
+      }
     }
     &__title {
       font-size: 72px;
@@ -101,6 +163,19 @@
         line-height: 65px;
         padding-bottom: 35px;
       }
+      @include tablet {
+        font-size: 38px;
+      }
+      @include mobile {
+        max-width: unset;
+      }
+      @include mobile-s {
+        text-align: center;
+      }
+      @include mobile-xs {
+        font-size: 30px;
+        line-height: 40px;
+      }
     }
 
     &__buttons {
@@ -112,6 +187,9 @@
       @include desktop {
         padding-bottom: 50px;
       }
+      @include tablet {
+        padding-block: 40px;
+      }
 
       &-more {
         background-color: var(--color-blue);
@@ -120,6 +198,9 @@
         transition-duration: 0.2s;
         @include hover {
           transform: scale(1.05);
+        }
+        @include mobile-xs {
+          padding: 15px 25px;
         }
       }
       &-link {
@@ -133,6 +214,15 @@
       color: var(--color-gray-alt);
       @include desktop {
         font-size: 14px;
+      }
+      @include mobile {
+        color: rgba(255, 255, 255, 0.8);
+      }
+      @include mobile-s {
+        text-align: center;
+      }
+      @include mobile-xs {
+        font-size: 13px;
       }
     }
   }
@@ -155,11 +245,22 @@
       top: 55px;
       width: 330px;
     }
+    @include mobile {
+      width: 250px;
+      background-position: center;
+    }
+    @include mobile-xs {
+      width: 190px;
+      top: 40px;
+    }
   }
 }
 
 .header {
   &__main-image {
+    @include mobile {
+      display: none;
+    }
     &__info {
       position: absolute;
       display: inline-flex;
@@ -199,7 +300,20 @@
         top: unset;
         text-align: left;
         flex-direction: column;
+        gap: 7px;
+      }
+      @include mobile-s {
+        bottom: -10px;
+        left: 0;
+        transform: translate(50%, 50%);
+        flex-direction: row;
+        justify-content: center;
+        padding-top: 10px;
         gap: 10px;
+      }
+      @include mobile-xs {
+        width: 100%;
+        transform: translate(0%, 50%);
       }
     }
     &__link {
@@ -209,6 +323,9 @@
       @include hover {
         color: var(--color-blue);
       }
+      @include mobile-s {
+        font-size: 12px;
+      }
     }
   }
 }
@@ -216,6 +333,9 @@
   width: 45.833vw;
   @include desktop-xl {
     width: 40.714vw;
+  }
+  @include tablet {
+    width: 45vw;
   }
 }
 .header__main-vert__title {
@@ -237,5 +357,37 @@
   display: none;
   @include desktop {
     display: inline-flex;
+  }
+  @include mobile-s {
+    display: flex;
+    justify-content: center;
+    margin-inline: auto;
+  }
+}
+.header__buttons-img {
+  @include mobile {
+    max-width: 23px;
+  }
+}
+.header__logo {
+  @include mobile {
+    max-width: 120px;
+  }
+}
+.header__burger-button {
+  color: #fff;
+  display: none;
+  @include mobile-s {
+    display: block;
+  }
+  @include hover {
+    color: var(--color-blue);
+  }
+}
+
+.mobile--s--none {
+  display: flex;
+  @include mobile-s {
+    display: none;
   }
 }

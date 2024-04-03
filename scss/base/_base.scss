@@ -11,6 +11,18 @@ body {
   @media (max-width: 1420px) {
     max-width: 1150px;
   }
+  @include desktop {
+    max-width: 1000px;
+  }
+  @include tablet {
+    max-width: 850px;
+  }
+  @include mobile-s {
+    max-width: 500px;
+  }
+  @include mobile-xs {
+    max-width: 400px;
+  }
 }
 
 .esports {
@@ -19,4 +31,8 @@ body {
   color: var(--color-blue);
   justify-content: center;
   font-size: 16px;
+}
+
+.none {
+  display: none;
 }

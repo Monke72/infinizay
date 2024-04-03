@@ -13,3 +13,10 @@ var swiper = new Swiper(".mySwiper", {
     prevEl: ".swiper-button-prev",
   },
 });
+
+const burgerBrn = document.querySelector(".header__burger-button");
+const burgerList = document.querySelector(".header__nav-list");
+
+burgerBrn.addEventListener("click", () => {
+  burgerList.classList.toggle("mobile--s--none");
+});
