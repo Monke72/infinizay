@@ -22,11 +22,15 @@
 
   &__nav-link {
     color: var(--color-base);
+    @include hover {
+      color: var(--color-accent-alt);
+    }
   }
 
   &__buttons {
     gap: 20px;
     display: flex;
+    align-items: center;
   }
 
   &__buttons-btn {
@@ -35,6 +39,9 @@
     border: 1px solid var(--color-base);
     line-height: 20px;
     letter-spacing: 0%;
+    @include hover {
+      transform: scale(1.1);
+    }
   }
   @include desktop {
     padding-bottom: 120px;
@@ -44,6 +51,9 @@
 .header__bascet {
   display: flex;
   position: relative;
+  @include hover {
+    transform: scale(1.1);
+  }
 }
 
 .counter {
@@ -107,6 +117,10 @@
         background-color: var(--color-blue);
         color: var(--color-base);
         padding: 21px 34px;
+        transition-duration: 0.2s;
+        @include hover {
+          transform: scale(1.05);
+        }
       }
       &-link {
         color: var(--color-base);

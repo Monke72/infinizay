@@ -55,3 +55,15 @@
 .news__main-title--notP {
   padding: unset;
 }
+
+.news__header {
+  display: flex;
+  justify-content: space-between;
+  &-right {
+    display: flex;
+    align-items: end;
+  }
+}
+.news__header-right__button {
+  color: var(--color-base);
+}
