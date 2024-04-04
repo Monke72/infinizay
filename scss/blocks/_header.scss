@@ -251,7 +251,7 @@
       background-position: center;
     }
     @include mobile-xs {
-      width: 190px;
+      width: 175px;
       top: 40px;
     }
   }
@@ -395,5 +395,10 @@
 .header__main-info__buttons-link {
   @include mobile-s {
     text-align: center;
+  }
+}
+.header__main-info__buttons-link {
+  @include hover {
+    color: var(--color-accent-alt);
   }
 }

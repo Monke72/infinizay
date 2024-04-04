@@ -72,7 +72,20 @@
     }
   }
 }
-.joun {
-  &__title {
+
+.join--accentend {
+  position: relative;
+  &::after {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    transform: scale(0.9);
+    content: url(./../image/footer/lineFooter.png);
+    @include mobile-s {
+      transform: scale(0.6);
+      position: absolute;
+      top: 35px;
+      left: -65px;
+    }
   }
 }

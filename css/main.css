@@ -633,7 +633,7 @@ body {
 }
 @media (max-width: 500px) {
   .title--accent::after {
-    width: 190px;
+    width: 175px;
     top: 40px;
   }
 }
@@ -822,6 +822,17 @@ body {
   }
 }
 
+@media (hover: hover) {
+  .header__main-info__buttons-link:hover {
+    color: var(--color-accent-alt);
+  }
+}
+@media (hover: none) {
+  .header__main-info__buttons-link:active {
+    color: var(--color-accent-alt);
+  }
+}
+
 .sponsors {
   padding-block: 130px;
   color: #555555;
@@ -979,6 +990,7 @@ body {
   padding: 35px 35px 35px 80px;
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.15);
+  transition-duration: 0.2s;
 }
 @media (max-width: 1023px) {
   .necessity__card-item {
@@ -994,6 +1006,16 @@ body {
 @media (max-width: 640px) {
   .necessity__card-item {
     padding: 7px;
+  }
+}
+@media (hover: hover) {
+  .necessity__card-item:hover {
+    transform: scale(1.05);
+  }
+}
+@media (hover: none) {
+  .necessity__card-item:active {
+    transform: scale(1.05);
   }
 }
 
@@ -1675,6 +1697,7 @@ body {
   color: var(--color-base);
   background-color: var(--color-blue);
   padding: 21px 34px;
+  transition-duration: 0.2s;
 }
 @media (max-width: 640px) {
   .news__header-right__button {
@@ -1683,7 +1706,17 @@ body {
 }
 @media (max-width: 500px) {
   .news__header-right__button {
-    padding: 10px 18px;
+    padding: 7px 12px;
+  }
+}
+@media (hover: hover) {
+  .news__header-right__button:hover {
+    transform: scale(1.05);
+  }
+}
+@media (hover: none) {
+  .news__header-right__button:active {
+    transform: scale(1.05);
   }
 }
 
@@ -1782,10 +1815,35 @@ body {
   }
 }
 
+.join--accentend {
+  position: relative;
+}
+.join--accentend::after {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  transform: scale(0.9);
+  content: url(./../image/footer/lineFooter.png);
+}
+@media (max-width: 640px) {
+  .join--accentend::after {
+    transform: scale(0.6);
+    position: absolute;
+    top: 35px;
+    left: -65px;
+  }
+}
+
 .footer {
   background-color: var(--color-footer-bc);
   padding-top: 130px;
   padding-bottom: 60px;
+}
+@media (max-width: 1023px) {
+  .footer {
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
 }
 .footer__top {
   display: flex;
@@ -1794,11 +1852,29 @@ body {
   padding-bottom: 47px;
   border-bottom: 1px solid rgb(62, 62, 62);
 }
+@media (max-width: 859px) {
+  .footer__top {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+  }
+}
+@media (max-width: 640px) {
+  .footer__top {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding-bottom: 35px;
+  }
+}
 .footer__top-socials img {
   max-width: 32px;
 }
 .footer__btm {
   padding-top: 48px;
+}
+@media (max-width: 640px) {
+  .footer__btm {
+    padding-top: 28px;
+  }
 }
 .footer__btm-text {
   font-size: 14px;
@@ -1813,6 +1889,11 @@ body {
   font-size: 15px;
   padding-top: 38px;
 }
+@media (max-width: 640px) {
+  .footer__top-logo__text {
+    text-align: center;
+  }
+}
 
 .logo {
   flex-shrink: 0;
@@ -1821,6 +1902,12 @@ body {
 .footer__top-menu__title {
   line-height: 30px;
   padding-bottom: 23px;
+}
+@media (max-width: 640px) {
+  .footer__top-menu__title {
+    padding-bottom: 12px;
+    line-height: 20px;
+  }
 }
 
 .footer__top-menu__link {
@@ -1865,20 +1952,35 @@ body {
   gap: 20px;
 }
 
-.footer--accentend {
-  position: relative;
-}
-.footer--accentend::after {
-  position: absolute;
-  top: 35px;
-  left: 0;
-  content: url(./../image/footer/lineFooter.png);
-}
 @media (max-width: 640px) {
-  .footer--accentend::after {
-    transform: scale(0.6);
-    position: absolute;
-    top: 35px;
-    left: -65px;
+  .footer__top-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer__top-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer__top-socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer__top-menu__list {
+    text-align: center;
   }
 }/*# sourceMappingURL=main.css.map */
