@@ -2,6 +2,7 @@
   background-color: var(--color-footer-bc);
   padding-top: 130px;
   padding-bottom: 60px;
+  
 
   &__top {
     display: flex;
@@ -76,5 +77,11 @@
     top: 35px;
     left: 0;
     content: url(./../image/footer/lineFooter.png);
+    @include mobile-s {
+      transform: scale(0.6);
+      position: absolute;
+      top: 35px;
+      left: -65px;
+    }
   }
 }

@@ -1,11 +1,30 @@
 .news {
+  position: relative;
   padding-block: 130px;
   background-color: #000000;
+  @include tablet {
+    padding-block: 80px;
+  }
+  @include mobile-s {
+    padding-block: 50px;
+  }
 
   &__header-left {
     &__title {
       font-size: 64px;
       line-height: 74px;
+      @include mobile {
+        font-size: 43px;
+        line-height: 60px;
+      }
+      @include mobile-s {
+        font-size: 34px;
+        line-height: 54px;
+      }
+      @include mobile-xs {
+        font-size: 19px;
+        line-height: 30px;
+      }
     }
   }
 
@@ -13,12 +32,22 @@
     display: flex;
     justify-content: space-between;
     gap: 10px;
+    @include mobile-s {
+      display: unset;
+    }
   }
 
   &__main-left {
     max-width: var(--news-sect-width);
     &__text {
       font-size: 36px;
+      @include mobile {
+        font-size: 30px;
+      }
+      @include mobile-xs {
+        font-size: 28px;
+        padding-bottom: 15px;
+      }
     }
   }
 
@@ -32,24 +61,51 @@
     grid-template-columns: repeat(2, 2fr);
     column-gap: 24px;
     max-height: 680px;
+    @include desktop {
+      max-height: 550px;
+    }
 
     &__text {
       font-size: 23px;
       line-height: 34px;
+      @include desktop {
+        font-size: 20px;
+        line-height: 30px;
+      }
+      @include mobile {
+        font-size: 16px;
+        line-height: 25px;
+      }
+      @include mobile-xs {
+        font-size: 14px;
+        line-height: 23px;
+        padding-bottom: 10px;
+      }
     }
   }
 }
 
 .news--esports {
   justify-content: start;
+  @include mobile-xs {
+    position: absolute;
+    top: 10px;
+  }
 }
 
 .news__main-left__img {
   margin-bottom: 54px;
+  @include desktop {
+    margin-bottom: 20px;
+  }
 }
 .news__main-title {
   padding-top: 30px;
   padding-bottom: 20px;
+  @include desktop {
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
 }
 
 .news__main-title--notP {
@@ -57,8 +113,13 @@
 }
 
 .news__header {
+  padding-bottom: 64px;
   display: flex;
   justify-content: space-between;
+  @include mobile-xs {
+    padding-bottom: 40px;
+    padding-top: 10px;
+  }
   &-right {
     display: flex;
     align-items: end;
@@ -66,4 +127,12 @@
 }
 .news__header-right__button {
   color: var(--color-base);
+  background-color: var(--color-blue);
+  padding: 21px 34px;
+  @include mobile-s {
+    padding: 14px 30px;
+  }
+  @include mobile-xs {
+    padding: 10px 18px;
+  }
 }

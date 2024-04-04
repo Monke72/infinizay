@@ -129,8 +129,9 @@
   &__main-info {
     position: relative;
     max-width: 45.556vw;
-    @include tablet {
-      max-width: 55vw;
+
+    @include mobile {
+      max-width: 55.556vw;
     }
     @include mobile-s {
       max-width: 100vw;
@@ -173,7 +174,7 @@
         text-align: center;
       }
       @include mobile-xs {
-        font-size: 30px;
+        font-size: 28px;
         line-height: 40px;
       }
     }
@@ -389,5 +390,10 @@
   display: flex;
   @include mobile-s {
     display: none;
+  }
+}
+.header__main-info__buttons-link {
+  @include mobile-s {
+    text-align: center;
   }
 }
