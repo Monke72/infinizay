@@ -57,6 +57,7 @@
     padding: 35px 35px 35px 80px;
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.15);
+    transition-duration: 0.2s;
 
     @include tablet {
       padding: 25px 25px 25px 60px;
@@ -67,6 +68,9 @@
     }
     @include mobile-s {
       padding: 7px;
+    }
+    @include hover {
+      transform: scale(1.05);
     }
   }
 }

@@ -2,7 +2,10 @@
   background-color: var(--color-footer-bc);
   padding-top: 130px;
   padding-bottom: 60px;
-  
+  @include tablet {
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
 
   &__top {
     display: flex;
@@ -10,6 +13,15 @@
     gap: 15px;
     padding-bottom: 47px;
     border-bottom: 1px solid rgb(62, 62, 62);
+    @include mobile {
+      display: grid;
+      grid-template-columns: repeat(2, 2fr);
+    }
+    @include mobile-s {
+      grid-template-columns: 1fr;
+      gap: 25px;
+      padding-bottom: 35px;
+    }
   }
 
   &__top-socials {
@@ -20,6 +32,9 @@
 
   &__btm {
     padding-top: 48px;
+    @include mobile-s {
+      padding-top: 28px;
+    }
   }
 
   &__btm-text {
@@ -35,6 +50,9 @@
   color: rgb(153, 153, 153);
   font-size: 15px;
   padding-top: 38px;
+  @include mobile-s {
+    text-align: center;
+  }
 }
 
 .logo {
@@ -43,6 +61,10 @@
 .footer__top-menu__title {
   line-height: 30px;
   padding-bottom: 23px;
+  @include mobile-s {
+    padding-bottom: 12px;
+    line-height: 20px;
+  }
 }
 .footer__top-menu__link {
   color: rgb(153, 153, 153);
@@ -70,18 +92,33 @@
   display: flex;
   gap: 20px;
 }
-.footer--accentend {
-  position: relative;
-  &::after {
-    position: absolute;
-    top: 35px;
-    left: 0;
-    content: url(./../image/footer/lineFooter.png);
-    @include mobile-s {
-      transform: scale(0.6);
-      position: absolute;
-      top: 35px;
-      left: -65px;
-    }
+
+.footer__top-logo {
+  @include mobile-s {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.footer__top-menu {
+  @include mobile-s {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.footer__top-socials {
+  @include mobile-s {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.footer__top-menu__list {
+  @include mobile-s {
+    text-align: center;
   }
 }

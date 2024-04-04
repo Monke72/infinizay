@@ -129,10 +129,14 @@
   color: var(--color-base);
   background-color: var(--color-blue);
   padding: 21px 34px;
+  transition-duration: 0.2s;
   @include mobile-s {
     padding: 14px 30px;
   }
   @include mobile-xs {
-    padding: 10px 18px;
+    padding: 7px 12px;
+  }
+  @include hover {
+    transform: scale(1.05);
   }
 }
