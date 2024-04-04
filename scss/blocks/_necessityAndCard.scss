@@ -17,6 +17,11 @@
     line-height: 74px;
     padding-top: 13px;
     padding-bottom: 39px;
+    @include mobile-s {
+      font-size: 37px;
+      line-height: 55px;
+      padding-bottom: 20px;
+    }
   }
 
   &__text {
@@ -28,6 +33,10 @@
     @include mobile {
       font-size: 18px;
     }
+    @include mobile-s {
+      font-size: 16px;
+      padding-bottom: 40px;
+    }
   }
 
   &__card-list {
@@ -37,6 +46,9 @@
     gap: 32px;
     @include mobile {
       grid-template-columns: 1fr;
+    }
+    @include mobile-s {
+      gap: 25px;
     }
   }
 
@@ -52,6 +64,9 @@
     @include mobile {
       max-width: var(--necessity-text-width);
       padding: 25px;
+    }
+    @include mobile-s {
+      padding: 7px;
     }
   }
 }
@@ -82,6 +97,9 @@
       font-size: 16px;
       text-align: center;
     }
+    @include mobile-s {
+      font-size: 13px;
+    }
   }
 }
 
@@ -96,6 +114,9 @@
   @include mobile {
     padding-block: 100px;
   }
+  @include mobile-s {
+    padding-bottom: 70px;
+  }
 }
 
 .card__title-text {
@@ -104,5 +125,12 @@
     content: url(./../icon/necessity/necessityTitleIcon.svg);
     position: absolute;
     left: -40px;
+    @include mobile-s {
+      left: -30px;
+      top: 5px;
+    }
+  }
+  @include mobile-s {
+    font-size: 20px;
   }
 }

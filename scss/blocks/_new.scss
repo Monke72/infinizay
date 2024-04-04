@@ -1,8 +1,23 @@
 .new {
   padding-block: 130px;
   background-color: #000000;
+  @include tablet {
+    padding-block: 80px;
+  }
+  @include mobile {
+    text-align: center;
+  }
+  @include mobile-xs {
+    padding-block: 50px;
+  }
   &__left {
     max-width: 721px;
+    @include desktop {
+      max-width: 485px;
+    }
+    @include tablet {
+      max-width: 400px;
+    }
   }
 
   &__left-title {
@@ -10,6 +25,16 @@
     line-height: 74px;
     font-weight: 300;
     padding-bottom: 38px;
+    @include tablet {
+      font-size: 55px;
+      line-height: 60px;
+    }
+    @include mobile-s {
+      font-size: 43px;
+    }
+    @include mobile-xs {
+      font-size: 35px;
+    }
   }
 
   &__left-text {
@@ -17,6 +42,13 @@
     color: rgba(223, 223, 223, 0.8);
     line-height: 30px;
     padding-bottom: 54px;
+    @include tablet {
+      font-size: 16px;
+      line-height: 25px;
+    }
+    @include mobile-xs {
+      font-size: 12px;
+    }
   }
 
   &__left-button {
@@ -32,6 +64,9 @@
 
   &__right {
     position: relative;
+    @include mobile {
+      display: none;
+    }
     &-btn {
       position: absolute;
       top: 0;
@@ -51,8 +86,38 @@
 .new__main {
   display: flex;
   justify-content: space-between;
+  @include mobile {
+    justify-content: center;
+  }
 }
 .new__esports {
-  justify-content: start;
   padding-bottom: 12px;
+  @include mobile {
+    justify-content: center;
+  }
+}
+.see--video {
+  display: none;
+  transition-duration: 0.2s;
+  @include mobile {
+    padding: 15px 34px;
+    background-color: var(--color-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  @include mobile-xs {
+    padding: 5px 30px;
+  }
+  @include hover {
+    transform: scale(1.05);
+  }
+}
+.new__left-btns {
+  @include mobile {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
 }

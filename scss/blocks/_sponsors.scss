@@ -6,10 +6,16 @@
   @include tablet {
     padding-block: 90px;
   }
+  @include mobile-s {
+    padding-block: 65px;
+  }
 
   &__title {
     font-size: var(--font-size-spons);
     color: #222730;
+    @include mobile-s {
+      line-height: 50px;
+    }
   }
 
   &__title--accented {
@@ -22,6 +28,9 @@
       position: absolute;
       left: 0;
       bottom: -13px;
+      @include mobile-xs {
+        width: 265px;
+      }
     }
   }
 
@@ -35,6 +44,11 @@
     font-size: 16px;
     padding-bottom: 52px;
     padding-top: 44px;
+    @include mobile-s {
+      font-size: 15px;
+      padding-bottom: 29px;
+      padding-top: 33px;
+    }
   }
 
   &__image-list {
@@ -47,7 +61,10 @@
       justify-items: center;
       max-width: 750px;
       margin-inline: auto;
-      gap: 15px;
+      gap: 25px;
+    }
+    @include mobile-s {
+      gap: 10px;
     }
   }
 }

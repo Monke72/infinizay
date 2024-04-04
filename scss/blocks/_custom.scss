@@ -4,6 +4,13 @@
     display: flex;
     justify-content: space-between;
     gap: 15px;
+    @include tablet {
+      gap: 3px;
+    }
+    @include mobile {
+      justify-content: center;
+      text-align: center;
+    }
   }
 
   &__info {
@@ -12,6 +19,19 @@
     @include desktop-xl {
       padding-block: 50px;
       max-width: 490px;
+    }
+    @include tablet {
+      max-width: 400px;
+      padding-block: 40px;
+    }
+    @include mobile {
+      max-width: 500px;
+    }
+    @include mobile-s {
+      max-width: 400px;
+    }
+    @include mobile-xs {
+      max-width: 290px;
     }
   }
 
@@ -27,6 +47,15 @@
     @include desktop-xl {
       font-size: 58px;
     }
+    @include tablet {
+      font-size: 50px;
+      line-height: 62px;
+      padding-bottom: 30px;
+    }
+    @include mobile-s {
+      font-size: 38px;
+      line-height: 45px;
+    }
   }
 
   &__info-text {
@@ -36,6 +65,12 @@
     @include desktop-xl {
       font-size: 18px;
       padding-bottom: 40px;
+    }
+    @include tablet {
+      font-size: 16px;
+    }
+    @include mobile-s {
+      font-size: 14px;
     }
   }
 }
@@ -58,5 +93,13 @@
 .custom__image-hero {
   height: 100%;
 }
-
-
+.custom__image {
+  @include mobile {
+    display: none;
+  }
+}
+.custom__info-esports {
+  @include mobile {
+    justify-content: center;
+  }
+}
